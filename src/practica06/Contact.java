@@ -8,7 +8,7 @@ public class Contact {
     public Contact(int id, String nombre, String telefono){
         this.id = id;
         setNombre(nombre);
-        setTelefono(telefono); ;
+        setTelefono(telefono);
     }
 
     public int getId(){
