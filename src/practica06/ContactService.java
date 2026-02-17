@@ -1,7 +1,6 @@
 package practica06;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +28,9 @@ public class ContactService {
         opt.get().setNombre(nombre);
         opt.get().setTelefono(telefono);
         return true;
+    }
+    public Contact buscarContacto (int id){
+        return buscarPorId(id).orElseThrow(()-> new RuntimeException("El contacto no existe"));
     }
 
     private Optional<Contact> buscarPorId(int id){
